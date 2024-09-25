@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Bruno Menz.</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="index.html" class="navbar-brand logo">Bruno Menz.</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#blog" class="smoothScroll">Blog</a></li>
+                    <li><a href="#work" class="smoothScroll">Events</a></li>
+                    <!--<li><a href="#contact" class="smoothScroll">Contacts</a></li>-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <!--<li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG HEADER -->
+    <section id="blog-header" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-5 col-sm-12">
+                    <h2>Designing an Architecture from Scratch: A Complete Step-by-Step Guide</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BLOG DETAIL -->
+    <section id="blog-detail" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <!-- BLOG THUMB -->
+                    <div class="blog-detail-thumb">
+                        <div class="blog-image">
+                            <img src="images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
+                        </div>
+                        <br />
+                        <p>Let’s talk about something every software architect has encountered: how to design an architecture from scratch! Don’t worry, this article won’t be a boring, endless technical journey. On the contrary, I’ll guide you through each step of the process with a light approach and some practical insights from my experiences over the years. Whether you’re planning to design a new system or simply want to better understand what goes into a good architecture, you’re in the right place.</p>
+
+                        <h2>1. The Good Old Requirements Gathering</h2>
+                        <p>I know, I know... you’ve heard this a million times, but let me tell you: gathering requirements is like choosing the land where you’ll build your house. If you skip this step or do it poorly, the chances of running into problems later are very high. </p>
+                        <p>Functional requirements are the tangible things the system needs to do. Think of something like a restaurant system: “place orders,” “register new products,” and so on. Non-functional requirements are more subtle but just as important. They define aspects like the volume the architecture needs to support (will there be 100 or 100,000 users?), security (what protection mechanisms will I implement?), and scalability. This information will determine whether your system can survive a spike in traffic or collapse like a house of cards on Black Friday.</p>
+                        <p>A good architect knows that spending time on requirements gathering isn’t a waste of time but an investment. For me, this process is the foundation for setting the direction of the entire project. After all, no one wants to create a system that only holds up until the first demand increase, right? </p>
+                        
+
+                        <h2>2. Segregating Domains and Bounded Contexts</h2>
+                        <p>Once you’ve mapped out the requirements, it’s time to organize the domains. Think of this like setting up the rooms in an apartment: each room has a purpose, and you don’t want to mix everything in one place, right? The same goes for your architecture. </p>
+                        <p>Each domain is a specific area of the system. Let’s use the example of an online pharmacy: you can separate the system into domains like inventory, cash flow, and customer registration. Each of these domains will have its own data and functionalities, and keeping this division clear helps avoid the dreaded excessive coupling.</p>
+                        <p>By using this strategy of bounded contexts, you not only make maintenance easier but also scalability. Want to add a new module? No problem, because each part is well separated. Want to migrate part of the architecture to another service? Easy, because your domains are well defined. This approach is widely recommended by experts like Eric Evans, the father of Domain-Driven Design (DDD). He always emphasizes the importance of keeping contexts clear to avoid confusion and ensure that each area functions independently. </p>
+
+                        <h2>3. Architectural Diagrams: Time to Draw</h2>
+                        <p>With the domains in hand, now comes the part that many people find complicated but can actually be quite fun: architectural diagrams. Remember when you used to draw in school? It’s almost the same thing, but with boxes and arrows! 😅 </p>
+                        <p>Here, you can use traditional UML diagrams (like use case or sequence diagrams) or something more specific like the C4 Model, which is my favorite. It allows you to visualize the architecture progressively, starting with a broad overview (L1) and then diving into the details of the components (L2, L3...). This helps to have both a macro and micro view of the system.</p>
+                        <p>But diagrams are not just for aesthetics. They are essential for making critical decisions, such as:</p>
+                        <ul>
+                            <li><b>Microservices or Monolith?</b> This is the first question. If the system is small and will grow slowly, a monolith might be simpler to manage. But if you already know it will grow, microservices may be the right choice.</li>
+                            <li><b>Events or APIs?</b> If your application is reactive, with many asynchronous interactions, an event-driven architecture might be ideal. But if you need quick and direct responses, the good old API might solve it.</li>
+                            <li><b>Relational or NoSQL Database?</b> It depends on the type of data you’re dealing with. Very structured data? Go relational. Flexible, high-volume data? NoSQL might be the best choice.</li>
+                        </ul>
+                        <p>These decisions are only a few examples of decisions based on the requirements you’ve already gathered that will ensure that the architecture is consistent, scalable, and resilient.</p>
+
+                        <!--<div class="blog-ads">
+        <h4>Blog Sample Advertising</h4>
+    </div>-->
+                        <h2>4. Final Documentation: The Architecture Blueprint</h2>
+                        <p>
+                            Now we’ve reached the final step, but certainly not the least important: the final documentation. Have you ever heard of the famous Blueprint from civil architects? The idea is the same, but in the software world. This document will guide the system’s development from start to finish, serving as a sort of "instruction manual."
+                        </p>
+                        <p>
+                            In it, you should include:
+                        </p>
+                            <ul>
+                                <li>A description of the services outlined in the diagrams.</li>
+                                <li>Transmitted payloads (after all, who doesn’t like to know what goes back and forth in the requests?).</li>
+                                <li>Sequence diagrams showing the order of events.</li>
+                                <li>Technologies used (it’s not enough to just draw; you need to say what you’re going to use).</li>
+                                <li>Entity and relationship models.</li>
+                                <li>Continuity and resilience plan (what to do if something goes wrong?).</li>
+                                <li>Security strategies (encryption, firewalls, authentication, etc.).</li>
+                                <li>Cost planning (after all, everything comes with a price, right?).</li>
+                                <li>Testing planning</li>
+                            </ul>
+                        
+                        <p>Besides guiding development, the Blueprint serves as a complete documentation of your architecture. This means that not only will you have a functioning system, but you’ll also have a documented system (and that’s rare!). As Martin Fowler highlights, documentation is a vital part of the process because it ensures that the project maintains its coherence and can be maintained and updated by others in the future.</p>
+
+                        <h2>Conclusion: Architecture is a Work in Progress</h2>
+                        <p>
+                            Designing an architecture from scratch is like drawing a map for an epic journey: you need to plan every detail but also be flexible to adjust the course. The secret lies in listening to the requirements, organizing the domains, making experience-based decisions, and, of course, documenting everything clearly.
+                        </p>
+                        <p>
+                            This method has worked well for me over the years, but like all good architecture, it’s always a work in progress. Each new project brings lessons, and the pursuit of continuous improvement is what keeps the work of software architecture so exciting and challenging.
+                        </p>
+
+                        <div class="blog-social-share">
+                            <h4>Share this article</h4>
+                            <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
+                            <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
+                            <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-5 col-sm-12">
+                    <div class="footer-thumb footer-info">
+                        <h2>Hydro Company</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="footer-thumb">
+                        <h2>Company</h2>
+                        <ul class="footer-link">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Join our team</a></li>
+                            <li><a href="#">Read Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="footer-thumb">
+                        <h2>Services</h2>
+                        <ul class="footer-link">
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-4">
+                    <div class="footer-thumb">
+                        <h2>Find us</h2>
+                        <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="footer-bottom">
+                        <div class="col-md-6 col-sm-5">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2017 Your Company</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-7">
+                            <div class="phone-contact">
+                                <p>Call us <span>(+66) 010-020-0340</span></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-popup">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12">
+                                <div class="modal-title">
+                                    <h2>Hydro Co</h2>
+                                </div>
+
+                                <!-- NAV TABS -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
+                                    <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
+                                </ul>
+
+                                <!-- TAB PANES -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
+                                        <form action="#" method="post">
+                                            <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                            <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
+                                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            <input type="submit" class="form-control" name="submit" value="Submit Button">
+                                        </form>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade in" id="sign_in">
+                                        <form action="#" method="post">
+                                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            <input type="submit" class="form-control" name="submit" value="Submit Button">
+                                            <a href="https://www.facebook.com/templatemo">Forgot your password?</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
