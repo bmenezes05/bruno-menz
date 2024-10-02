@@ -8,7 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\blog-detail.html" />
+    <Content Remove="wwwroot\how-i-became-a-solutions-architect.html" />
+    <Content Remove="wwwroot\postgraduate-or-certifications.html" />
+    <Content Remove="wwwroot\pt\designing-an-architecture-from-scratch.html" />
+    <Content Remove="wwwroot\pt\how-i-became-a-solutions-architect.html" />
+    <Content Remove="wwwroot\pt\index.html" />
+    <Content Remove="wwwroot\pt\postgraduate-or-certifications.html" />
+    <Content Remove="wwwroot\pt\the-importance-of-english-in-technology.html" />
+    <Content Remove="wwwroot\the-importance-of-english-in-technology.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\how-i-became-a-solutions-architect.html" />
+    <None Include="wwwroot\pt\designing-an-architecture-from-scratch.html" />
+    <None Include="wwwroot\pt\how-i-became-a-solutions-architect.html" />
+    <None Include="wwwroot\pt\index.html" />
+    <None Include="wwwroot\pt\postgraduate-or-certifications.html" />
+    <None Include="wwwroot\pt\the-importance-of-english-in-technology.html" />
+    <None Include="wwwroot\the-importance-of-english-in-technology.html" />
+    <None Include="wwwroot\postgraduate-or-certifications.html" />
+    <None Include="wwwroot\designing-an-architecture-from-scratch.html" />
     <None Include="wwwroot\index.html" />
   </ItemGroup>
 

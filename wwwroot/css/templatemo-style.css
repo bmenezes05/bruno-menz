@@ -46,7 +46,7 @@ p, ul li {
     color: #757575;
     font-size: 14px;
     font-weight: normal;
-    line-height: 25px;
+    line-height: 35px;
 }
 
 strong {
@@ -116,13 +116,13 @@ a {
 
     .section-btn:hover,
     .section-btn:focus {
-        background: #ce3232;         
+        background: #ce3232;
         border-color: transparent;
         color: #393939;
     }
 
 .overlay {
-    background: #000; 
+    background: #000;
     opacity: 0.8;
     position: absolute;
     width: 100%;
@@ -204,8 +204,7 @@ section {
 
     .custom-navbar .navbar-brand {
         color: #ffffff;
-        font-size: 25px;        
-        
+        font-size: 25px;
     }
 
 .logo {
@@ -218,6 +217,20 @@ section {
 
 .top-nav-collapse {
     background: #ffffff;
+}
+
+
+.custom-navbar .navbar-nav.navbar-flag.navbar-right {
+    margin-right: 8em;
+}
+
+    .custom-navbar .navbar-nav.navbar-flag.navbar-right li a {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+.custom-navbar .flag {
+    width: 20px;
 }
 
 .custom-navbar .navbar-nav.navbar-nav-first {
@@ -364,15 +377,16 @@ section {
     font-weight: 500;
     margin-left: 20px;
 }
+
 .home-video img {
     border-radius: 50%;
     max-width: 100%;
     max-height: 100%;
 }
 
-    .home-info span small {
-        display: block;
-    }
+.home-info span small {
+    display: block;
+}
 
 .home-info .home-info-phrase {
     color: #f9f9f9;
@@ -381,7 +395,7 @@ section {
       ABOUT              
   -----------------------------------------*/
 #about {
-    text-align: left;    
+    text-align: left;
 }
 
     #about .about-info:first-child {
@@ -574,7 +588,7 @@ section {
     }
 
         .blog-info .section-btn:hover {
-            background: #ce3232;            
+            background: #ce3232;
             color: #ffffff;
         }
 
@@ -901,6 +915,10 @@ footer {
 
     .custom-navbar .navbar-nav.navbar-nav-first {
         margin-left: inherit;
+    }
+
+    .custom-navbar .navbar-nav.navbar-flag.navbar-right {
+        margin-right: inherit;
     }
 
     .home-video img {

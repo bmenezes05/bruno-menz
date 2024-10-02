@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <title>Bruno Menz.</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../css/templatemo-style.css">
+</head>
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- LOGO TEXT HERE -->
+                <a href="index.html" class="navbar-brand logo">Bruno Menz.</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="index.html#home" class="smoothScroll">Início</a></li>
+                    <li><a href="index.html#about" class="smoothScroll">Sobre</a></li>
+                    <li><a href="index.html#blog" class="smoothScroll">Blog</a></li>
+                    <li><a href="index.html#work" class="smoothScroll">Eventos</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.linkedin.com/in/brunomenezes5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://medium.com/@brunomenz.dev" target="_blank"><i class="fa-brands fa-medium"></i></a></li>
+                    <li><a href="https://github.com/bmenezes05" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-flag navbar-right">
+                    <li><a href="../index.html"><img title="English" src="../images/usa-flag.png" class="flag" /></a></li>
+                    <li><a href="index.html"><img title="Português Brasil" src="../images/brazil-flag.png" class="flag" /></a></li>
+                    <li><a href="index.html"><img title="Português" src="../images/portugal-flag.png" class="flag" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG HEADER -->
+    <section id="blog-header" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-5 col-sm-12">
+                    <h2>Projetando uma Arquitetura do Zero: Um Passo a Passo Completo</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG DETAIL -->
+    <section id="blog-detail" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <!-- BLOG THUMB -->
+                    <div class="blog-detail-thumb">
+                        <div class="blog-image">
+                            <img src="../images/blog-detail-image.jpg" class="img-responsive" alt="Imagem do Blog">
+                        </div>
+                        <br />
+                        <p>Vamos falar sobre algo que todo arquiteto de software já se deparou: como projetar uma arquitetura do zero! Não se preocupe, esse artigo não vai ser uma viagem técnica chata e sem fim. Pelo contrário, vou te guiar por cada etapa desse processo, usando uma abordagem leve e com alguns insights práticos das minhas experiências ao longo dos anos. Se você está planejando projetar um sistema novo ou simplesmente quer entender melhor o que está por trás de uma boa arquitetura, está no lugar certo.</p>
+
+                        <h2>1. O Bom e Velho Levantamento de Requisitos</h2>
+                        <p>
+                            Eu sei, eu sei… você já ouviu isso um milhão de vezes, mas deixa eu te dizer: o levantamento de requisitos é como escolher o terreno onde você vai construir sua casa. Se você ignorar esse passo ou fizer de qualquer jeito, as chances de dar problema depois são altíssimas.
+                        </p>
+                        <p>
+                            Requisitos funcionais são aquelas coisas que o sistema precisa fazer de forma tangível. Pense em algo como um sistema de restaurante: "lançar pedidos", "cadastrar novos produtos", e por aí vai. Já os requisitos não funcionais são mais sutis, mas igualmente importantes. Eles definem aspectos como a volumetria que a arquitetura precisa suportar (vai ter 100 ou 100 mil usuários?), a segurança (quais mecanismos de proteção vou implementar?) e a escalabilidade. São essas informações que vão determinar se seu sistema vai sobreviver a um pico de acessos ou cair igual um castelo de cartas na Black Friday.
+                        </p>
+                        <p>
+                            Um bom arquiteto sabe que passar tempo nesse levantamento não é perda de tempo, mas um investimento. Para mim, esse processo é a base para definir a direção de todo o projeto. Afinal, ninguém quer criar um sistema que só aguenta até o primeiro aumento de demanda, né?
+                        </p>
+
+                        <h2>2. Segregação dos Domínios e Contextos Delimitados</h2>
+                        <p>Depois de mapear os requisitos, é hora de organizar os domínios. Pense nisso como montar as divisões de um apartamento: cada cômodo tem uma função, e você não quer misturar tudo no mesmo lugar, certo? O mesmo vale para a sua arquitetura.</p>
+                        <p>
+                            Cada domínio é uma área específica do sistema. Vamos pegar o exemplo de uma farmácia online: você pode separar o sistema em domínios de estoque, fluxo de caixa e cadastro de clientes. Cada um desses domínios vai ter seus próprios dados e funcionalidades, e manter essa divisão clara ajuda a evitar aquele temido acoplamento excessivo.
+                        </p>
+                        <p>
+                            Ao usar essa estratégia de contextos delimitados, você facilita não só a manutenção, mas também a escalabilidade. Quer adicionar um novo módulo? Sem problemas, porque cada parte está bem separada. Quer migrar parte da arquitetura para outro serviço? Tranquilo, porque seus domínios estão bem delimitados. Essa abordagem é amplamente recomendada por especialistas como Eric Evans, o pai do Domain-Driven Design (DDD). Ele sempre reforça a importância de deixar os contextos bem claros para evitar confusão e garantir que cada área funcione de forma independente.
+                        </p>
+
+                        <h2>3. Diagramas Arquiteturais: Hora de Desenhar</h2>
+                        <p>Com os domínios em mãos, agora vem a parte que muita gente acha complicada, mas que pode ser bem divertida: os diagramas arquiteturais. Lembra quando você fazia desenhos na escola? É quase a mesma coisa, mas com caixinhas e setinhas! 😅</p>
+                        <p>Aqui, você pode usar desde os tradicionais diagramas UML (como de casos de uso ou de sequência) até algo mais específico como o C4 Model, que é o meu preferido. Ele permite que você visualize a arquitetura de forma progressiva, começando com uma visão geral (L1) e depois mergulhando nos detalhes dos componentes (L2, L3…). Isso ajuda a ter uma visão tanto macro quanto micro do sistema.</p>
+
+                        <p>Mas os diagramas não são apenas estéticos. Eles são essenciais para tomar decisões críticas, como:</p>
+                        <ul>
+                            <li><b>Microserviços ou Monolito?</b> Essa é a primeira pergunta. Se o sistema é pequeno e vai crescer devagar, um monolito pode ser mais simples de gerenciar. Mas se você já sabe que ele vai crescer, microserviços podem ser a escolha certa.</li>
+                            <li><b>Eventos ou APIs?</b>  Se sua aplicação é reativa, com muitas interações assíncronas, uma arquitetura orientada a eventos pode ser ideal. Mas se você precisa de respostas rápidas e diretas, talvez a boa e velha API resolva.</li>
+                            <li><b>Banco de dados Relacional ou NoSQL? </b>  Depende do tipo de dado que você vai lidar. Estruturas muito definidas? Vai de relacional. Dados flexíveis e de grande volume? Pode ser que um NoSQL seja a melhor escolha.</li>
+                        </ul>
+                        <p>Tomar essas decisões com base nos requisitos que você já levantou vai garantir que a arquitetura fique coerente, escalável e resiliente.</p>
+
+                        <h2>4. Documentação Final: O Blueprint da Arquitetura</h2>
+
+                        <p>Aqui chegamos à última etapa, mas definitivamente não menos importante: a documentação final. Já ouviu falar no famoso Blueprint dos arquitetos civis? A ideia é a mesma, só que no mundo do software. Esse documento vai guiar o desenvolvimento do sistema do início ao fim, servindo como uma espécie de “manual de instruções”.</p>
+                        <p>Nele, você deve incluir:</p>
+                        <ul>
+                            <li>
+                                Descrição dos serviços que foram desenhados nos diagramas.
+                            </li>
+                            <li>Payloads trafegados (afinal, quem não gosta de saber o que vai e volta nas requisições?).</li>
+                            <li>Diagrama de sequência mostrando a ordem dos eventos.</li>
+                            <li>Tecnologias utilizadas (não adianta só desenhar; você precisa dizer o que vai usar).</li>
+                            <li>Modelos de entidade e relacionamento.</li>
+                            <li>Plano de continuidade e resiliência (o que fazer se algo der errado?).</li>
+                            <li>Estratégias de segurança (cripto, firewalls, autenticação, etc.).</li>
+                            <li>Planejamento de testes e de custos (afinal, tudo tem um preço, não é mesmo?).</li>
+                        </ul>
+                        
+                        <p>Além de orientar o desenvolvimento, o Blueprint serve como uma documentação completa da sua arquitetura. Isso significa que você não só terá um sistema funcionando, mas um sistema documentado (e isso é raro!). Como o autor Martin Fowler destaca, a documentação é parte vital do processo, pois ela garante que o projeto mantenha sua coerência e possa ser mantido e atualizado por outros no futuro.</p>
+
+                        <h2>Conclusão: Arquitetura é uma Obra em Progresso</h2>
+                        <p>Projetar uma arquitetura do zero é como desenhar um mapa para uma viagem épica: você precisa planejar cada detalhe, mas também ter flexibilidade para ajustar o percurso. O segredo está em ouvir os requisitos, organizar os domínios, tomar decisões baseadas na experiência, e, claro, documentar tudo com clareza.</p>
+                        <p>Esse método tem funcionado bem para mim ao longo dos anos, mas como toda boa arquitetura, é sempre um trabalho em progresso. Cada novo projeto traz lições, e a busca pela melhoria contínua é o que mantém o trabalho de arquitetura de software tão emocionante e desafiador.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="footer-thumb footer-info">
+                        <h2 class="logo">Bruno Menz.</h2>
+                        <p>Transformando ideias em soluções criativas e impactantes. Entregando sistemas escaláveis que resolvem desafios complexos e impulsionam a inovação para o crescimento e a eficiência dos negócios.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-8">
+                    <div class="footer-thumb">
+                        <h2>Serviços</h2>
+                        <ul class="footer-link">
+                            <li>Desenvolvimento de Aplicações Web e Mobile.</li>
+                            <li>Consultoria em Arquitetura de Software.</li>
+                            <li>Otimização de Performance de Aplicações.</li>
+                            <li>Integração de APIs e Microservices.</li>
+                            <li>Automação de Processos e DevOps.</li>
+                            <li>Auditoria e Revisão de Código.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="footer-thumb">
+                        <h2>Localização</h2>
+                        <p>São Paulo - Brasil</p>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="footer-bottom">
+                        <div class="col-md-6 col-sm-5">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2024 Bruno Menz.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-7">
+                            <div class="phone-contact">
+                                <p>Contato por email <span>brunomenz.dev@gmail.com</span></p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/brunomenezes5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="https://medium.com/@brunomenz.dev" target="_blank"><i class="fa-brands fa-medium"></i></a></li>
+                                <li><a href="https://github.com/bmenezes05" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/de0a3548b4.js" crossorigin="anonymous"></script>
+</body>
+</html>
